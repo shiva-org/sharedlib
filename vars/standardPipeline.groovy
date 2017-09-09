@@ -11,6 +11,7 @@ def call(body) {
 
             try {
                 stage ('Clone') {
+	           echo " from clone stage"
                     checkout scm
                 }
                 stage ('Build') {
