@@ -9,7 +9,7 @@ def call(body) {
     // now build, based on the configuration provided
     node {
         git url: "https://github.com/jenkinsci/${config.name}-plugin.git"
-        sh "mvn install"
-        mail to: "...", subject: "${config.name} plugin build", body: "..."
+        #sh "mvn install"
+        #mail to: "...", subject: "${config.name} plugin build", body: "..."
     }
 }
