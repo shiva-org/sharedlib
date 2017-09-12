@@ -8,7 +8,9 @@ def call(body) {
 
     // now build, based on the configuration provided
     node {
-        git url: "https://github.com/jenkinsci/${config.name}-plugin.git"
+	def fullurl = ${config.server}/${config.name}-plugin.git
+
+        git url: "$fullurl"
 	echo "user name is ${config.uid}"
 	echo "group name is : ${config.groupid}"
     }
