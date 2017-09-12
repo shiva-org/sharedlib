@@ -9,7 +9,6 @@ def call(body) {
     // now build, based on the configuration provided
     node {
 	def fullurl = ${config.server}/${config.name}-plugin.git
-        #git url: "$fullurl"
         echo ${fullurl}
         echo "user name is ${config.uid}"
 	echo "group name is : ${config.groupid}"
